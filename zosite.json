@@ -1,0 +1,15 @@
+{
+  "name": "cpr-physio-sales-agent",
+  "local_port": 56965,
+  "entrypoint": "bun run dev",
+  "publish": {
+    "label": "cpr-physio-sales-agent",
+    "type": "http",
+    "entrypoint": "bun run prod",
+    "published_port": 55792,
+    "env": {
+      "NODE_ENV": "production",
+      "ZO_CLIENT_IDENTITY_TOKEN": "none"
+    }
+  }
+}
