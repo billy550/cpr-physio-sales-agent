@@ -37,6 +37,13 @@ export default function AdminTransactionsPage() {
   const [distributors, setDistributors] = useState<Distributor[]>([]);
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
+  const [filter, setFilter] = useState({
+    month: "",
+    distributor_id: "",
+    corporate_client_id: "",
+    branch_id: "",
+    status: ""
+  });
   const [form, setForm] = useState({
     distributor_id: "",
     corporate_client_id: "",
@@ -49,13 +56,21 @@ export default function AdminTransactionsPage() {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [filter]);
 
   const fetchData = async () => {
     const token = localStorage.getItem("cpr_token");
+    setLoading(true);
+    const params = new URLSearchParams();
+    if (filter.month) params.append("month", filter.month);
+    if (filter.distributor_id) params.append("distributor_id", filter.distributor_id);
+    if (filter.corporate_client_id) params.append("client_id", filter.corporate_client_id);
+    if (filter.branch_id) params.append("branch_id", filter.branch_id);
+    if (filter.status) params.append("status", filter.status);
+
     try {
       const [txRes, branchRes, clientRes, distRes] = await Promise.all([
-        fetch("/api/admin/transactions", { headers: { Authorization: `Bearer ${token}` } }),
+        fetch(`/api/admin/transactions?${params}`, { headers: { Authorization: `Bearer ${token}` } }),
         fetch("/api/branches", { headers: { Authorization: `Bearer ${token}` } }),
         fetch("/api/corporate-clients", { headers: { Authorization: `Bearer ${token}` } }),
         fetch("/api/admin/distributors", { headers: { Authorization: `Bearer ${token}` } })
@@ -119,24 +134,106 @@ export default function AdminTransactionsPage() {
         </button>
       </div>
 
+      <div className="bg-white rounded-xl shadow-sm p-4">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-4 items-end">
+          <div>
+            <label className="block text-sm text-gray-500 mb-1">月份</label>
+            <select
+              value={filter.month}
+              onChange={(e) => setFilter({ ...filter, month: e.target.value })}
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
+            >
+              <option value="">全部月份</option>
+              <option value="2026-05">2026年5月</option>
+              <option value="2026-04">2026年4月</option>
+              <option value="2026-03">2026年3月</option>
+              <option value="2026-02">2026年2月</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm text-gray-500 mb-1">Channel Partners</label>
+            <select
+              value={filter.distributor_id}
+              onChange={(e) => setFilter({ ...filter, distributor_id: e.target.value })}
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
+            >
+              <option value="">全部</option>
+              {distributors.map((d) => (
+                <option key={d.id} value={d.id}>{d.name}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm text-gray-500 mb-1">企業客戶</label>
+            <select
+              value={filter.corporate_client_id}
+              onChange={(e) => setFilter({ ...filter, corporate_client_id: e.target.value })}
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
+            >
+              <option value="">全部</option>
+              {clients.map((c) => (
+                <option key={c.id} value={c.id}>{c.company_name}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm text-gray-500 mb-1">分店</label>
+            <select
+              value={filter.branch_id}
+              onChange={(e) => setFilter({ ...filter, branch_id: e.target.value })}
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
+            >
+              <option value="">全部</option>
+              {branches.map((b) => (
+                <option key={b.id} value={b.id}>{b.name}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm text-gray-500 mb-1">狀態</label>
+            <select
+              value={filter.status}
+              onChange={(e) => setFilter({ ...filter, status: e.target.value })}
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
+            >
+              <option value="">全部</option>
+              <option value="completed">已完成</option>
+              <option value="refunded">已退款</option>
+            </select>
+          </div>
+          <button
+            type="button"
+            onClick={() => setFilter({ month: "", distributor_id: "", corporate_client_id: "", branch_id: "", status: "" })}
+            className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 text-sm font-medium"
+          >
+            清除篩選
+          </button>
+        </div>
+      </div>
+
       <div className="bg-white rounded-xl shadow-sm p-6">
+        {loading && <p className="text-sm text-gray-500 mb-3">載入中...</p>}
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
               <tr className="border-b border-gray-200">
                 <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">日期</th>
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">分銷商</th>
+                <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">Channel Partners</th>
                 <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">員工</th>
                 <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">公司</th>
                 <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">分店</th>
                 <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">服務</th>
                 <th className="text-right py-3 px-4 text-sm font-medium text-gray-500">金額</th>
-                <th className="text-right py-3 px-4 text-sm font-medium text-gray-500">佣金</th>
+                <th className="text-right py-3 px-4 text-sm font-medium text-gray-500">Partner Earnings</th>
                 <th className="text-center py-3 px-4 text-sm font-medium text-gray-500">狀態</th>
               </tr>
             </thead>
             <tbody>
-              {transactions.map((tx) => (
+              {transactions.length === 0 ? (
+                <tr>
+                  <td colSpan={9} className="text-center py-8 text-gray-400">沒有符合條件的交易</td>
+                </tr>
+              ) : transactions.map((tx) => (
                 <tr key={tx.id} className="border-b border-gray-100">
                   <td className="py-3 px-4 text-sm">{tx.transaction_date}</td>
                   <td className="py-3 px-4 text-sm">{tx.distributor_name}</td>
@@ -167,7 +264,7 @@ export default function AdminTransactionsPage() {
             <h3 className="text-lg font-semibold mb-4">新增交易</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-sm text-gray-500 mb-1">分銷商</label>
+                <label className="block text-sm text-gray-500 mb-1">Channel Partners</label>
                 <select
                   value={form.distributor_id}
                   onChange={(e) => setForm({ ...form, distributor_id: e.target.value })}

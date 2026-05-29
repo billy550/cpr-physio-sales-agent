@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 interface ImportResult {
   success: number;
@@ -42,11 +42,51 @@ export default function AdminImportPage() {
   };
 
   const generateTemplate = () => {
-    const headers = ["分銷商ID", "企業客戶ID", "分店ID", "員工姓名", "服務項目", "消費金額", "消費日期"];
+    const headers = ["Channel Partner ID", "企業客戶ID", "分店ID", "員工姓名", "服務項目", "消費金額", "消費日期"];
     const example = ["1", "1", "1", "陳大文", "痛症治療", "1000", "2026-04-01"];
     const csv = [headers.join(","), example.join(",")];
     const blob = new Blob([csv.join("\n")], { type: "text/csv;charset=utf-8;" });
     setTemplateUrl(URL.createObjectURL(blob));
+  };
+
+  const parseCsv = async (csvFile: File) => {
+    const text = await csvFile.text();
+    const lines = text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+    const dataLines = lines.slice(1);
+
+    return dataLines.map((line) => {
+      const values: string[] = [];
+      let current = "";
+      let quoted = false;
+
+      for (let i = 0; i < line.length; i++) {
+        const char = line[i];
+        const next = line[i + 1];
+
+        if (char === "\"" && quoted && next === "\"") {
+          current += "\"";
+          i++;
+        } else if (char === "\"") {
+          quoted = !quoted;
+        } else if (char === "," && !quoted) {
+          values.push(current.trim());
+          current = "";
+        } else {
+          current += char;
+        }
+      }
+      values.push(current.trim());
+
+      return {
+        distributor_id: values[0] || "",
+        corporate_client_id: values[1] || "",
+        branch_id: values[2] || "",
+        employee_name: values[3] || "",
+        service_item: values[4] || "",
+        amount: values[5] || "",
+        transaction_date: values[6] || ""
+      };
+    });
   };
 
   const handleUpload = async () => {
@@ -54,15 +94,21 @@ export default function AdminImportPage() {
     setLoading(true);
     setResult(null);
 
-    const formData = new FormData();
-    formData.append("file", file);
-
     const token = localStorage.getItem("cpr_token");
     try {
-      const res = await fetch("/api/admin/transactions/import", {
+      if (!file.name.toLowerCase().endsWith(".csv")) {
+        setResult({ success: 0, failed: 1, errors: [{ row: 0, error: "請上傳 CSV 文件" }] });
+        return;
+      }
+
+      const rows = await parseCsv(file);
+      const res = await fetch("/api/admin/import", {
         method: "POST",
-        headers: { Authorization: `Bearer ${token}` },
-        body: formData
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`
+        },
+        body: JSON.stringify({ rows })
       });
       const data = await res.json();
       setResult(data);
@@ -101,7 +147,7 @@ export default function AdminImportPage() {
         <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center mb-4">
           <input
             type="file"
-            accept=".csv,.xlsx"
+            accept=".csv"
             onChange={(e) => setFile(e.target.files?.[0] || null)}
             className="hidden"
             id="file-upload"
@@ -113,7 +159,7 @@ export default function AdminImportPage() {
             <p className="text-gray-600 mb-1">
               {file ? file.name : "點擊選擇文件 或 拖放文件到這裡"}
             </p>
-            <p className="text-xs text-gray-400">支援 CSV, XLSX 格式</p>
+            <p className="text-xs text-gray-400">支援 CSV 格式</p>
           </label>
         </div>
 
@@ -156,7 +202,7 @@ export default function AdminImportPage() {
       <div className="bg-white rounded-xl shadow-sm p-6">
         <h3 className="text-lg font-medium mb-4">格式說明</h3>
         <div className="text-sm text-gray-600 space-y-2">
-          <p><strong>分銷商ID：</strong>從分銷商管理頁面獲取</p>
+          <p><strong>Channel Partner ID：</strong>從 Channel Partners 頁面獲取</p>
           <p><strong>企業客戶ID：</strong>從企業客戶管理頁面獲取</p>
           <p><strong>分店ID：</strong>1=西環, 2=旺角, 3=尖沙咀, 4=機場</p>
           <p><strong>消費日期：</strong>格式 YYYY-MM-DD</p>

@@ -169,3 +169,1798 @@ body {
 .glass-ui .text-gray-500 {
   color: #0f172a !important;
 }
+
+.cpr-app {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(241, 242, 246, 0.95) 0%, #eef2ef 48%, #f7f8f5 100%);
+  color: #0c0d0e;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+}
+
+.cpr-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: linear-gradient(135deg, #282e24 0%, #2f532e 100%) !important;
+  border-bottom: 1px solid rgba(242, 241, 105, 0.2);
+  box-shadow: 0 12px 28px rgba(40, 46, 36, 0.2) !important;
+}
+
+.cpr-topbar .text-gray-900,
+.cpr-topbar .text-gray-600,
+.cpr-topbar .text-gray-500 {
+  color: rgba(255, 255, 255, 0.86) !important;
+}
+
+.cpr-topbar h1 {
+  color: #ffffff !important;
+  letter-spacing: 0;
+}
+
+.cpr-topbar button {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+.cpr-topbar button:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+}
+
+.cpr-brand-mark,
+.cpr-login-mark {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: #f2f169;
+  color: #282e24;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  box-shadow: inset 0 -10px 18px rgba(40, 46, 36, 0.12);
+}
+
+.cpr-login-mark {
+  width: 58px;
+  height: 58px;
+  font-size: 0.9rem;
+}
+
+.cpr-role-chip,
+.cpr-user-chip {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.09);
+  padding: 0.4rem 0.7rem;
+}
+
+.cpr-layout {
+  align-items: flex-start;
+}
+
+.cpr-sidebar {
+  position: sticky;
+  top: 96px;
+  background: #ffffff !important;
+  border: 1px solid rgba(86, 111, 116, 0.16);
+  border-radius: 8px !important;
+  box-shadow: 0 18px 38px rgba(40, 46, 36, 0.08) !important;
+}
+
+.cpr-sidebar a {
+  border-radius: 8px !important;
+  color: #566f74 !important;
+  font-weight: 600;
+}
+
+.cpr-sidebar a:hover {
+  background: #f1f2f6 !important;
+  color: #282e24 !important;
+}
+
+.cpr-sidebar a.bg-blue-50 {
+  position: relative;
+  background: #e8efea !important;
+  color: #2f532e !important;
+}
+
+.cpr-sidebar a.bg-blue-50::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  width: 4px;
+  height: 24px;
+  border-radius: 999px;
+  background: #f2f169;
+  transform: translateY(-50%);
+}
+
+.cpr-sidebar a.bg-blue-50 svg {
+  color: #2f532e;
+}
+
+.cpr-app main h2 {
+  color: #282e24 !important;
+  letter-spacing: 0;
+}
+
+.cpr-app main h3 {
+  color: #282e24 !important;
+}
+
+.cpr-app .rounded-xl,
+.cpr-app .rounded-2xl {
+  border-radius: 8px !important;
+}
+
+.cpr-app .bg-white {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border: 1px solid rgba(86, 111, 116, 0.14);
+  box-shadow: 0 12px 30px rgba(40, 46, 36, 0.07) !important;
+}
+
+.cpr-app .shadow-sm {
+  box-shadow: 0 12px 30px rgba(40, 46, 36, 0.07) !important;
+}
+
+.cpr-app .text-gray-900 {
+  color: #282e24 !important;
+}
+
+.cpr-app .text-gray-700 {
+  color: #415747 !important;
+}
+
+.cpr-app .text-gray-600,
+.cpr-app .text-gray-500 {
+  color: #566f74 !important;
+}
+
+.cpr-app .text-gray-400 {
+  color: #9da5ae !important;
+}
+
+.cpr-app .text-blue-600,
+.cpr-app .text-blue-700,
+.cpr-app .text-purple-600,
+.cpr-app .text-purple-700 {
+  color: #566f74 !important;
+}
+
+.cpr-app .text-green-600,
+.cpr-app .text-green-700 {
+  color: #2f532e !important;
+}
+
+.cpr-app .bg-blue-600,
+.cpr-app .bg-green-600 {
+  background: #2f532e !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 18px rgba(47, 83, 46, 0.2);
+}
+
+.cpr-app .bg-blue-600:hover,
+.cpr-app .bg-green-600:hover,
+.cpr-app .hover\:bg-blue-700:hover,
+.cpr-app .hover\:bg-green-700:hover {
+  background: #282e24 !important;
+}
+
+.cpr-app .bg-blue-100,
+.cpr-app .bg-purple-100 {
+  background: #e7efee !important;
+  color: #2f532e !important;
+}
+
+.cpr-app .bg-green-100,
+.cpr-app .bg-green-50 {
+  background: #e6f1df !important;
+  color: #2f532e !important;
+}
+
+.cpr-app .bg-yellow-100 {
+  background: #fbfacf !important;
+  color: #706f00 !important;
+}
+
+.cpr-app .bg-gray-100,
+.cpr-app .bg-gray-50 {
+  background: #f1f2f6 !important;
+}
+
+.cpr-app table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.cpr-app thead tr {
+  background: #f1f2f6;
+}
+
+.cpr-app th {
+  color: #566f74 !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.cpr-app td {
+  color: #282e24;
+}
+
+.cpr-app tbody tr {
+  transition: background-color 160ms ease;
+}
+
+.cpr-app tbody tr:hover {
+  background: rgba(120, 155, 161, 0.08);
+}
+
+.cpr-app .border-gray-200,
+.cpr-app .border-gray-100,
+.cpr-app .border-gray-300 {
+  border-color: rgba(86, 111, 116, 0.16) !important;
+}
+
+.cpr-app input,
+.cpr-app select,
+.cpr-app textarea,
+.cpr-login input {
+  border-color: rgba(86, 111, 116, 0.24) !important;
+  background: #ffffff;
+  color: #282e24;
+  font-size: 0.92rem;
+}
+
+.cpr-app input:focus,
+.cpr-app select:focus,
+.cpr-app textarea:focus,
+.cpr-login input:focus {
+  outline: 2px solid rgba(120, 155, 161, 0.3);
+  outline-offset: 2px;
+  border-color: #789ba1 !important;
+  box-shadow: none !important;
+}
+
+.cpr-app .fixed.inset-0 {
+  background: rgba(40, 46, 36, 0.55) !important;
+  backdrop-filter: blur(4px);
+}
+
+.cpr-login {
+  background:
+    linear-gradient(145deg, rgba(40, 46, 36, 0.96) 0%, rgba(47, 83, 46, 0.96) 52%, #789ba1 100%);
+  color: #282e24;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+}
+
+.cpr-login-card {
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 8px !important;
+  box-shadow: 0 26px 70px rgba(12, 13, 14, 0.28) !important;
+}
+
+.cpr-login .text-gray-900 {
+  color: #282e24 !important;
+}
+
+.cpr-login .text-gray-700,
+.cpr-login .text-gray-600,
+.cpr-login .text-gray-500 {
+  color: #566f74 !important;
+}
+
+.cpr-login button[type="submit"] {
+  background: #2f532e !important;
+  color: #ffffff;
+  box-shadow: 0 10px 22px rgba(47, 83, 46, 0.24);
+}
+
+.cpr-login button[type="submit"]:hover {
+  background: #282e24 !important;
+}
+
+@media (max-width: 900px) {
+  .cpr-layout {
+    flex-direction: column;
+  }
+
+  .cpr-sidebar {
+    position: static;
+    width: 100% !important;
+    overflow-x: auto;
+  }
+
+  .cpr-sidebar nav {
+    display: flex;
+    min-width: max-content;
+  }
+
+  .cpr-sidebar a {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 640px) {
+  .cpr-topbar .max-w-7xl > .flex {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cpr-topbar .flex.items-center.gap-4 {
+    flex-wrap: wrap;
+  }
+}
+
+.cpr-app .cpr-topbar {
+  background: linear-gradient(135deg, #282e24 0%, #2f532e 100%) !important;
+  border-color: rgba(242, 241, 105, 0.2) !important;
+  box-shadow: 0 12px 28px rgba(40, 46, 36, 0.2) !important;
+}
+
+.cpr-app .cpr-topbar h1,
+.cpr-app .cpr-topbar .text-gray-900 {
+  color: #ffffff !important;
+}
+
+.cpr-app .cpr-topbar .text-gray-600,
+.cpr-app .cpr-topbar .text-gray-500 {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.cpr-app .cpr-sidebar {
+  background: linear-gradient(180deg, #282e24 0%, #223022 100%) !important;
+  border-color: rgba(242, 241, 105, 0.12) !important;
+  box-shadow: 0 22px 42px rgba(40, 46, 36, 0.16) !important;
+}
+
+.cpr-app .cpr-sidebar a {
+  color: rgba(255, 255, 255, 0.84) !important;
+}
+
+.cpr-app .cpr-sidebar a:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+}
+
+.cpr-app .cpr-sidebar a.bg-blue-50 {
+  background: rgba(120, 155, 161, 0.22) !important;
+  color: #ffffff !important;
+}
+
+.cpr-app .cpr-sidebar a.bg-blue-50 svg {
+  color: #f2f169 !important;
+}
+
+/* CPR Physio brand refresh: blue primary with yellow highlight. */
+.cpr-app {
+  background:
+    linear-gradient(180deg, #f4f7ff 0%, #eef4ff 48%, #f8faff 100%);
+}
+
+.cpr-app .cpr-topbar,
+.cpr-topbar {
+  background: linear-gradient(135deg, #08245c 0%, #1646a3 52%, #375efb 100%) !important;
+  border-color: rgba(242, 241, 105, 0.28) !important;
+  box-shadow: 0 14px 30px rgba(8, 36, 92, 0.24) !important;
+}
+
+.cpr-app .cpr-sidebar {
+  background: linear-gradient(180deg, #08245c 0%, #123579 100%) !important;
+  border-color: rgba(242, 241, 105, 0.18) !important;
+  box-shadow: 0 22px 42px rgba(8, 36, 92, 0.18) !important;
+}
+
+.cpr-brand-mark,
+.cpr-login-mark {
+  background: #f2f169;
+  color: #08245c;
+}
+
+.cpr-app main h2,
+.cpr-app main h3,
+.cpr-app .text-gray-900,
+.cpr-app td {
+  color: #08245c !important;
+}
+
+.cpr-app .text-gray-700 {
+  color: #1d3f7b !important;
+}
+
+.cpr-app .text-gray-600,
+.cpr-app .text-gray-500,
+.cpr-app .text-blue-600,
+.cpr-app .text-blue-700,
+.cpr-app .text-purple-600,
+.cpr-app .text-purple-700 {
+  color: #486491 !important;
+}
+
+.cpr-app .text-green-600,
+.cpr-app .text-green-700 {
+  color: #1646a3 !important;
+}
+
+.cpr-app .bg-white {
+  border-color: rgba(55, 94, 251, 0.13);
+  box-shadow: 0 12px 30px rgba(8, 36, 92, 0.08) !important;
+}
+
+.cpr-app .shadow-sm {
+  box-shadow: 0 12px 30px rgba(8, 36, 92, 0.08) !important;
+}
+
+.cpr-app .bg-blue-600,
+.cpr-app .bg-green-600 {
+  background: #1646a3 !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 18px rgba(22, 70, 163, 0.22);
+}
+
+.cpr-app .bg-blue-600:hover,
+.cpr-app .bg-green-600:hover,
+.cpr-app .hover\:bg-blue-700:hover,
+.cpr-app .hover\:bg-green-700:hover {
+  background: #08245c !important;
+}
+
+.cpr-app .bg-blue-100,
+.cpr-app .bg-purple-100,
+.cpr-app .bg-green-100,
+.cpr-app .bg-green-50 {
+  background: #eaf0ff !important;
+  color: #1646a3 !important;
+}
+
+.cpr-app .bg-yellow-100 {
+  background: #fbfacf !important;
+  color: #666500 !important;
+}
+
+.cpr-app .bg-gray-100,
+.cpr-app .bg-gray-50,
+.cpr-app thead tr {
+  background: #f1f4fb !important;
+}
+
+.cpr-app th {
+  color: #486491 !important;
+}
+
+.cpr-app tbody tr:hover {
+  background: rgba(55, 94, 251, 0.07);
+}
+
+.cpr-app .border-gray-200,
+.cpr-app .border-gray-100,
+.cpr-app .border-gray-300 {
+  border-color: rgba(55, 94, 251, 0.14) !important;
+}
+
+.cpr-app input,
+.cpr-app select,
+.cpr-app textarea,
+.cpr-login input {
+  border-color: rgba(55, 94, 251, 0.22) !important;
+  color: #08245c;
+}
+
+.cpr-app input:focus,
+.cpr-app select:focus,
+.cpr-app textarea:focus,
+.cpr-login input:focus {
+  outline-color: rgba(55, 94, 251, 0.26);
+  border-color: #375efb !important;
+}
+
+.cpr-app .fixed.inset-0 {
+  background: rgba(8, 36, 92, 0.56) !important;
+}
+
+.cpr-app .cpr-sidebar a.bg-blue-50 {
+  background: rgba(55, 94, 251, 0.24) !important;
+  color: #ffffff !important;
+}
+
+.cpr-app .cpr-sidebar a.bg-blue-50::before {
+  background: #f2f169;
+}
+
+.cpr-app .cpr-sidebar a.bg-blue-50 svg {
+  color: #f2f169 !important;
+}
+
+.cpr-login {
+  background:
+    linear-gradient(145deg, #08245c 0%, #1646a3 54%, #375efb 100%);
+}
+
+.cpr-login-card {
+  box-shadow: 0 26px 70px rgba(8, 36, 92, 0.34) !important;
+}
+
+.cpr-login .text-gray-900 {
+  color: #08245c !important;
+}
+
+.cpr-login .text-gray-700,
+.cpr-login .text-gray-600,
+.cpr-login .text-gray-500 {
+  color: #486491 !important;
+}
+
+.cpr-login button[type="submit"] {
+  background: #1646a3 !important;
+  box-shadow: 0 10px 22px rgba(22, 70, 163, 0.25);
+}
+
+.cpr-login button[type="submit"]:hover {
+  background: #08245c !important;
+}
+
+/* CPR logo color match: muted teal-blue with bright yellow linework. */
+.cpr-app {
+  background:
+    linear-gradient(180deg, #f1f5f7 0%, #edf3f5 48%, #f8faf9 100%);
+}
+
+.cpr-app .cpr-topbar,
+.cpr-topbar {
+  background: linear-gradient(135deg, #3f7483 0%, #51899a 58%, #5f96a7 100%) !important;
+  border-color: rgba(241, 236, 82, 0.34) !important;
+  box-shadow: 0 14px 30px rgba(63, 116, 131, 0.23) !important;
+}
+
+.cpr-app .cpr-sidebar {
+  background: linear-gradient(180deg, #3f7483 0%, #356879 100%) !important;
+  border-color: rgba(241, 236, 82, 0.2) !important;
+  box-shadow: 0 22px 42px rgba(63, 116, 131, 0.18) !important;
+}
+
+.cpr-brand-mark,
+.cpr-login-mark {
+  background: #f1ec52;
+  color: #3f7483;
+}
+
+.cpr-app main h2,
+.cpr-app main h3,
+.cpr-app .text-gray-900,
+.cpr-app td {
+  color: #244f5c !important;
+}
+
+.cpr-app .text-gray-700 {
+  color: #356879 !important;
+}
+
+.cpr-app .text-gray-600,
+.cpr-app .text-gray-500,
+.cpr-app .text-blue-600,
+.cpr-app .text-blue-700,
+.cpr-app .text-purple-600,
+.cpr-app .text-purple-700 {
+  color: #557b86 !important;
+}
+
+.cpr-app .text-green-600,
+.cpr-app .text-green-700 {
+  color: #3f7483 !important;
+}
+
+.cpr-app .bg-white {
+  border-color: rgba(81, 137, 154, 0.16);
+  box-shadow: 0 12px 30px rgba(63, 116, 131, 0.08) !important;
+}
+
+.cpr-app .shadow-sm {
+  box-shadow: 0 12px 30px rgba(63, 116, 131, 0.08) !important;
+}
+
+.cpr-app .bg-blue-600,
+.cpr-app .bg-green-600 {
+  background: #51899a !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 18px rgba(81, 137, 154, 0.24);
+}
+
+.cpr-app .bg-blue-600:hover,
+.cpr-app .bg-green-600:hover,
+.cpr-app .hover\:bg-blue-700:hover,
+.cpr-app .hover\:bg-green-700:hover {
+  background: #3f7483 !important;
+}
+
+.cpr-app .bg-blue-100,
+.cpr-app .bg-purple-100,
+.cpr-app .bg-green-100,
+.cpr-app .bg-green-50 {
+  background: #e5f0f3 !important;
+  color: #3f7483 !important;
+}
+
+.cpr-app .bg-yellow-100 {
+  background: #fbfacd !important;
+  color: #696500 !important;
+}
+
+.cpr-app .bg-gray-100,
+.cpr-app .bg-gray-50,
+.cpr-app thead tr {
+  background: #edf3f5 !important;
+}
+
+.cpr-app th {
+  color: #557b86 !important;
+}
+
+.cpr-app tbody tr:hover {
+  background: rgba(81, 137, 154, 0.08);
+}
+
+.cpr-app .border-gray-200,
+.cpr-app .border-gray-100,
+.cpr-app .border-gray-300 {
+  border-color: rgba(81, 137, 154, 0.16) !important;
+}
+
+.cpr-app input,
+.cpr-app select,
+.cpr-app textarea,
+.cpr-login input {
+  border-color: rgba(81, 137, 154, 0.24) !important;
+  color: #244f5c;
+}
+
+.cpr-app input:focus,
+.cpr-app select:focus,
+.cpr-app textarea:focus,
+.cpr-login input:focus {
+  outline-color: rgba(81, 137, 154, 0.28);
+  border-color: #51899a !important;
+}
+
+.cpr-app .fixed.inset-0 {
+  background: rgba(36, 79, 92, 0.56) !important;
+}
+
+.cpr-app .cpr-sidebar a.bg-blue-50 {
+  background: rgba(241, 236, 82, 0.15) !important;
+  color: #ffffff !important;
+}
+
+.cpr-app .cpr-sidebar a.bg-blue-50::before {
+  background: #f1ec52;
+}
+
+.cpr-app .cpr-sidebar a.bg-blue-50 svg {
+  color: #f1ec52 !important;
+}
+
+.cpr-login {
+  background:
+    linear-gradient(145deg, #3f7483 0%, #51899a 54%, #6aa0af 100%);
+}
+
+.cpr-login-card {
+  box-shadow: 0 26px 70px rgba(36, 79, 92, 0.32) !important;
+}
+
+.cpr-login .text-gray-900 {
+  color: #244f5c !important;
+}
+
+.cpr-login .text-gray-700,
+.cpr-login .text-gray-600,
+.cpr-login .text-gray-500 {
+  color: #557b86 !important;
+}
+
+.cpr-login button[type="submit"] {
+  background: #51899a !important;
+  box-shadow: 0 10px 22px rgba(81, 137, 154, 0.25);
+}
+
+.cpr-login button[type="submit"]:hover {
+  background: #3f7483 !important;
+}
+
+.cpr-brand-logo,
+.cpr-login-logo {
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 14px rgba(36, 79, 92, 0.18));
+}
+
+.cpr-brand-logo {
+  width: 62px;
+  height: 62px;
+  flex: 0 0 auto;
+}
+
+.cpr-login-logo {
+  width: 104px;
+  height: 104px;
+}
+
+@media (max-width: 640px) {
+  .cpr-brand-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .cpr-login-logo {
+    width: 92px;
+    height: 92px;
+  }
+}
+
+/* Reference dashboard layout pass. */
+.cpr-app {
+  background: #f4f7f8;
+}
+
+.cpr-app .cpr-topbar {
+  height: 72px;
+}
+
+.cpr-topbar .max-w-7xl {
+  max-width: none !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.cpr-menu-button {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.cpr-menu-button span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 999px;
+  background: #ffffff;
+}
+
+.cpr-topbar-divider {
+  width: 1px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.cpr-topbar h1 {
+  font-size: 18px !important;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.cpr-topbar p {
+  margin-top: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cpr-topbar-actions {
+  gap: 14px !important;
+}
+
+.cpr-notification {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.cpr-notification svg {
+  width: 22px;
+  height: 22px;
+}
+
+.cpr-notification span {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  display: grid;
+  place-items: center;
+  width: 17px;
+  height: 17px;
+  border-radius: 999px;
+  background: #f1ec52;
+  color: #244f5c;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.cpr-avatar {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.34);
+  color: #ffffff;
+  font-weight: 800;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+}
+
+.cpr-user-chip {
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+.cpr-role-chip {
+  padding: 0.42rem 0.7rem;
+  font-weight: 700;
+}
+
+.cpr-app > main {
+  max-width: none !important;
+  width: 100%;
+  padding: 0 !important;
+}
+
+.cpr-layout {
+  gap: 0 !important;
+  min-height: calc(100vh - 72px);
+}
+
+.cpr-layout > .flex-1 {
+  min-width: 0;
+  padding: 32px 26px 44px;
+}
+
+.cpr-sidebar {
+  top: 72px !important;
+  width: 230px !important;
+  min-height: calc(100vh - 72px);
+  border-radius: 0 !important;
+  padding: 22px 10px 18px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cpr-sidebar nav {
+  display: grid;
+  gap: 8px;
+}
+
+.cpr-sidebar a {
+  min-height: 46px;
+  padding: 0 16px !important;
+  gap: 16px !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+}
+
+.cpr-sidebar a svg {
+  width: 23px !important;
+  height: 23px !important;
+  stroke-width: 2;
+}
+
+.cpr-sidebar a.bg-blue-50::before {
+  display: none;
+}
+
+.cpr-sidebar-summary {
+  margin: auto 2px 20px;
+  padding: 14px 15px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 12px;
+}
+
+.cpr-sidebar-summary p {
+  margin: 0 0 9px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.cpr-sidebar-summary strong,
+.cpr-sidebar-summary span {
+  display: block;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.cpr-sidebar-version {
+  margin: 0 15px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 11px;
+}
+
+.cpr-dashboard {
+  max-width: 1224px;
+  margin: 0 auto;
+}
+
+.cpr-dashboard-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.cpr-dashboard-header h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.18;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.cpr-dashboard-header p {
+  margin-top: 14px;
+  color: #4d5960;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.cpr-dashboard-header p strong {
+  color: #3f7483;
+  font-weight: 900;
+}
+
+.cpr-dashboard-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 15px;
+}
+
+.cpr-dashboard-actions button,
+.cpr-panel-heading button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 18px;
+  border: 1px solid rgba(36, 79, 92, 0.16);
+  border-radius: 6px;
+  background: #ffffff;
+  color: #263238;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 3px 8px rgba(36, 79, 92, 0.04);
+}
+
+.cpr-dashboard-actions svg {
+  width: 20px;
+  height: 20px;
+}
+
+.cpr-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  margin-bottom: 26px;
+}
+
+.cpr-metric-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 158px;
+  padding: 28px 22px;
+  border-radius: 6px;
+  border: 1px solid rgba(36, 79, 92, 0.12);
+  background: #ffffff;
+  box-shadow:
+    0 2px 8px rgba(15, 23, 42, 0.07),
+    0 16px 36px rgba(36, 79, 92, 0.06);
+}
+
+.cpr-metric-card p {
+  margin: 0 0 16px;
+  color: #334044;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cpr-metric-card strong {
+  display: block;
+  color: #145c34;
+  font-size: 29px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.cpr-metric-card span {
+  display: block;
+  margin-top: 20px;
+  color: #5d666b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cpr-metric-card span b {
+  margin-left: 10px;
+  color: #2b8a4a;
+  font-weight: 800;
+}
+
+.cpr-metric-icon {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  background: #dceee8;
+  color: #145c34;
+}
+
+.cpr-metric-icon svg {
+  width: 34px;
+  height: 34px;
+}
+
+.cpr-performance-panel,
+.cpr-target-strip {
+  border-radius: 6px;
+  border: 1px solid rgba(36, 79, 92, 0.12);
+  background: #ffffff;
+  box-shadow:
+    0 2px 8px rgba(15, 23, 42, 0.07),
+    0 16px 36px rgba(36, 79, 92, 0.06);
+}
+
+.cpr-performance-panel {
+  padding: 24px 14px 20px;
+  margin-bottom: 20px;
+}
+
+.cpr-panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 0 10px 20px;
+}
+
+.cpr-panel-heading h3 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.cpr-panel-heading > div {
+  display: flex;
+  gap: 12px;
+}
+
+.cpr-panel-heading button {
+  min-height: 42px;
+  min-width: 126px;
+  padding: 0 16px;
+}
+
+.cpr-performance-table {
+  width: 100%;
+  border-collapse: separate !important;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid rgba(36, 79, 92, 0.08);
+  border-radius: 5px;
+}
+
+.cpr-performance-table thead tr,
+.cpr-performance-table tfoot tr {
+  background: #edf6f3 !important;
+}
+
+.cpr-performance-table th {
+  padding: 14px 16px !important;
+  color: #36484d !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+}
+
+.cpr-performance-table td {
+  padding: 13px 16px !important;
+  border-bottom: 1px solid rgba(36, 79, 92, 0.1);
+  color: #1d2a2f !important;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cpr-performance-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.cpr-performance-table tfoot td {
+  padding-top: 17px !important;
+  padding-bottom: 17px !important;
+  font-weight: 900;
+}
+
+.cpr-rank {
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 999px;
+  background: #145c34;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.cpr-positive {
+  color: #2b8a4a !important;
+}
+
+.cpr-negative {
+  color: #ef5555 !important;
+}
+
+.cpr-progress-cell {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  min-width: 130px;
+}
+
+.cpr-progress-cell span,
+.cpr-target-progress span {
+  display: block;
+  height: 7px;
+  border-radius: 999px;
+  background: #e5e8eb;
+  overflow: hidden;
+}
+
+.cpr-progress-cell span {
+  width: 86px;
+}
+
+.cpr-progress-cell i,
+.cpr-target-progress i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #145c34;
+}
+
+.cpr-progress-cell b {
+  min-width: 36px;
+  color: #1d2a2f;
+  font-size: 13px;
+}
+
+.cpr-target-strip {
+  display: grid;
+  grid-template-columns: 64px 210px minmax(280px, 1fr) 260px;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 28px;
+}
+
+.cpr-target-icon {
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 999px;
+  background: #dceee8;
+  color: #145c34;
+}
+
+.cpr-target-icon svg {
+  width: 34px;
+  height: 34px;
+}
+
+.cpr-target-strip p,
+.cpr-target-strip span {
+  margin: 0;
+  color: #4d5960;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.cpr-target-strip strong {
+  display: block;
+  margin: 4px 0;
+  color: #1d2a2f;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.cpr-target-progress {
+  padding: 0 34px;
+  border-left: 1px solid rgba(36, 79, 92, 0.16);
+  border-right: 1px solid rgba(36, 79, 92, 0.16);
+}
+
+.cpr-target-progress strong {
+  color: #145c34;
+  text-align: center;
+}
+
+.cpr-target-progress span {
+  width: 100%;
+}
+
+.cpr-target-progress p {
+  margin-top: 9px;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media (max-width: 1100px) {
+  .cpr-metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cpr-target-strip {
+    grid-template-columns: 64px 1fr;
+  }
+
+  .cpr-target-progress {
+    grid-column: 1 / -1;
+    border: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .cpr-app .cpr-topbar {
+    height: auto;
+  }
+
+  .cpr-layout {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .cpr-sidebar {
+    min-height: auto;
+    width: 100% !important;
+    max-width: none;
+    position: static !important;
+    border-radius: 0 !important;
+  }
+
+  .cpr-sidebar nav {
+    display: flex;
+    overflow-x: auto;
+    min-width: 0;
+    padding-bottom: 2px;
+  }
+
+  .cpr-sidebar a {
+    flex: 0 0 auto;
+  }
+
+  .cpr-sidebar-summary,
+  .cpr-sidebar-version {
+    display: none;
+  }
+
+  .cpr-layout > .flex-1 {
+    width: 100%;
+    padding: 26px 16px 36px;
+  }
+
+  .cpr-dashboard {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .cpr-performance-panel {
+    overflow: hidden;
+  }
+
+  .cpr-dashboard-header {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .cpr-menu-button,
+  .cpr-topbar-divider,
+  .cpr-notification,
+  .cpr-avatar {
+    display: none;
+  }
+
+  .cpr-dashboard-header h2 {
+    font-size: 25px;
+  }
+
+  .cpr-dashboard-actions,
+  .cpr-panel-heading,
+  .cpr-panel-heading > div {
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cpr-metric-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cpr-metric-card {
+    min-height: 132px;
+  }
+}
+
+/* iOS-style glass finish for CPR dashboard surfaces. */
+.cpr-app {
+  background:
+    linear-gradient(135deg, rgba(81, 137, 154, 0.18) 0%, rgba(244, 247, 248, 0.96) 28%, rgba(255, 255, 255, 0.88) 58%, rgba(241, 236, 82, 0.16) 100%),
+    #f4f7f8;
+}
+
+.cpr-app::before {
+  content: "";
+  position: fixed;
+  inset: 72px 0 0 230px;
+  pointer-events: none;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0) 38%),
+    linear-gradient(210deg, rgba(81, 137, 154, 0.14), rgba(241, 236, 82, 0.12) 64%, rgba(255, 255, 255, 0));
+  opacity: 0.85;
+}
+
+.cpr-app .cpr-topbar {
+  background:
+    linear-gradient(135deg, rgba(36, 79, 92, 0.84), rgba(63, 116, 131, 0.72)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.03)) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22) !important;
+  box-shadow:
+    0 16px 34px rgba(36, 79, 92, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.26) !important;
+  backdrop-filter: blur(22px) saturate(170%);
+  -webkit-backdrop-filter: blur(22px) saturate(170%);
+}
+
+.cpr-app .cpr-sidebar {
+  background:
+    linear-gradient(155deg, rgba(36, 79, 92, 0.82), rgba(63, 116, 131, 0.7)),
+    rgba(36, 79, 92, 0.72) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  box-shadow:
+    18px 0 44px rgba(36, 79, 92, 0.18),
+    inset 1px 0 0 rgba(255, 255, 255, 0.18) !important;
+  backdrop-filter: blur(24px) saturate(155%);
+  -webkit-backdrop-filter: blur(24px) saturate(155%);
+}
+
+.cpr-app .cpr-sidebar a {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.cpr-app .cpr-sidebar a:hover {
+  background: rgba(255, 255, 255, 0.13) !important;
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.cpr-app .cpr-sidebar a.bg-blue-50 {
+  background:
+    linear-gradient(135deg, rgba(241, 236, 82, 0.24), rgba(255, 255, 255, 0.16)) !important;
+  border-color: rgba(241, 236, 82, 0.34);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    0 8px 22px rgba(11, 39, 48, 0.12);
+}
+
+.cpr-app .cpr-sidebar-summary,
+.cpr-app .cpr-role-chip,
+.cpr-app .cpr-notification,
+.cpr-app .cpr-avatar {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+}
+
+.cpr-app .bg-white,
+.cpr-app .cpr-metric-card,
+.cpr-app .cpr-performance-panel,
+.cpr-app .cpr-target-strip,
+.cpr-login-card {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.38)),
+    rgba(255, 255, 255, 0.42) !important;
+  border: 1px solid rgba(255, 255, 255, 0.66) !important;
+  box-shadow:
+    0 18px 44px rgba(36, 79, 92, 0.13),
+    0 2px 10px rgba(36, 79, 92, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.86),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.24) !important;
+  backdrop-filter: blur(26px) saturate(170%);
+  -webkit-backdrop-filter: blur(26px) saturate(170%);
+}
+
+.cpr-app .bg-white::before,
+.cpr-app .cpr-metric-card::before,
+.cpr-app .cpr-performance-panel::before,
+.cpr-app .cpr-target-strip::before,
+.cpr-login-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(125deg, rgba(255, 255, 255, 0.66), rgba(255, 255, 255, 0.08) 34%, rgba(255, 255, 255, 0) 62%);
+  opacity: 0.76;
+}
+
+.cpr-app .bg-white > *,
+.cpr-app .cpr-metric-card > *,
+.cpr-app .cpr-performance-panel > *,
+.cpr-app .cpr-target-strip > *,
+.cpr-login-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.cpr-app button,
+.cpr-login button {
+  border-radius: 10px !important;
+}
+
+.cpr-app .bg-blue-600,
+.cpr-app .bg-green-600,
+.cpr-login button[type="submit"] {
+  background:
+    linear-gradient(135deg, rgba(81, 137, 154, 0.92), rgba(36, 79, 92, 0.82)),
+    rgba(81, 137, 154, 0.72) !important;
+  border: 1px solid rgba(255, 255, 255, 0.36) !important;
+  box-shadow:
+    0 12px 28px rgba(36, 79, 92, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.42),
+    inset 0 -1px 0 rgba(15, 47, 56, 0.2) !important;
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+}
+
+.cpr-app .bg-blue-600:hover,
+.cpr-app .bg-green-600:hover,
+.cpr-app .hover\:bg-blue-700:hover,
+.cpr-app .hover\:bg-green-700:hover,
+.cpr-login button[type="submit"]:hover {
+  background:
+    linear-gradient(135deg, rgba(97, 154, 170, 0.96), rgba(36, 79, 92, 0.88)),
+    rgba(81, 137, 154, 0.8) !important;
+  transform: translateY(-1px);
+}
+
+.cpr-dashboard-actions button,
+.cpr-panel-heading button,
+.cpr-app input,
+.cpr-app select,
+.cpr-app textarea,
+.cpr-login input {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.46)),
+    rgba(255, 255, 255, 0.48) !important;
+  border: 1px solid rgba(255, 255, 255, 0.72) !important;
+  box-shadow:
+    0 8px 22px rgba(36, 79, 92, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+}
+
+.cpr-dashboard-actions button:hover,
+.cpr-panel-heading button:hover {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.56)),
+    rgba(255, 255, 255, 0.58) !important;
+  transform: translateY(-1px);
+}
+
+.cpr-app thead tr,
+.cpr-app .bg-gray-100,
+.cpr-app .bg-gray-50,
+.cpr-performance-table thead tr,
+.cpr-performance-table tfoot tr {
+  background:
+    linear-gradient(135deg, rgba(81, 137, 154, 0.12), rgba(255, 255, 255, 0.32)) !important;
+}
+
+.cpr-app .bg-blue-100,
+.cpr-app .bg-purple-100,
+.cpr-app .bg-green-100,
+.cpr-app .bg-green-50,
+.cpr-app .bg-yellow-100 {
+  border: 1px solid rgba(255, 255, 255, 0.54);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52);
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+}
+
+.cpr-metric-icon,
+.cpr-target-icon {
+  background:
+    linear-gradient(145deg, rgba(241, 236, 82, 0.42), rgba(255, 255, 255, 0.3)),
+    rgba(255, 255, 255, 0.34) !important;
+  border: 1px solid rgba(255, 255, 255, 0.54);
+  box-shadow:
+    0 10px 24px rgba(81, 137, 154, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px) saturate(155%);
+  -webkit-backdrop-filter: blur(16px) saturate(155%);
+}
+
+.cpr-app .fixed.inset-0 {
+  background: rgba(36, 79, 92, 0.38) !important;
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+}
+
+.cpr-login {
+  background:
+    linear-gradient(135deg, rgba(36, 79, 92, 0.94), rgba(63, 116, 131, 0.8) 48%, rgba(241, 236, 82, 0.28) 100%),
+    #244f5c !important;
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .cpr-app .bg-white,
+  .cpr-app .cpr-metric-card,
+  .cpr-app .cpr-performance-panel,
+  .cpr-app .cpr-target-strip,
+  .cpr-login-card {
+    background: rgba(255, 255, 255, 0.92) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .cpr-app::before {
+    inset: 72px 0 0 0;
+  }
+
+  .cpr-app .cpr-sidebar {
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+  }
+}
+
+/* Keep navigation glass readable: these elements also carry utility bg-white classes. */
+.cpr-app .cpr-topbar,
+.cpr-app .cpr-sidebar {
+  overflow: hidden;
+}
+
+.cpr-app .cpr-topbar::before,
+.cpr-app .cpr-sidebar::before {
+  display: none !important;
+}
+
+.cpr-app .cpr-topbar.bg-white,
+.cpr-app .cpr-topbar {
+  background:
+    linear-gradient(135deg, rgba(36, 79, 92, 0.94), rgba(63, 116, 131, 0.88)),
+    rgba(36, 79, 92, 0.86) !important;
+  border-color: rgba(255, 255, 255, 0.24) !important;
+  box-shadow:
+    0 16px 34px rgba(36, 79, 92, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.24) !important;
+  backdrop-filter: blur(22px) saturate(170%);
+  -webkit-backdrop-filter: blur(22px) saturate(170%);
+}
+
+.cpr-app .cpr-sidebar.bg-white,
+.cpr-app .cpr-sidebar {
+  background:
+    linear-gradient(155deg, rgba(36, 79, 92, 0.9), rgba(63, 116, 131, 0.82)),
+    rgba(36, 79, 92, 0.84) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  box-shadow:
+    18px 0 44px rgba(36, 79, 92, 0.2),
+    inset 1px 0 0 rgba(255, 255, 255, 0.16) !important;
+  backdrop-filter: blur(24px) saturate(155%);
+  -webkit-backdrop-filter: blur(24px) saturate(155%);
+}
+
+.cpr-app .cpr-sidebar a {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+.cpr-app .cpr-sidebar a:hover,
+.cpr-app .cpr-sidebar a.bg-blue-50 {
+  color: #ffffff !important;
+}
+
+.cpr-app .cpr-topbar .text-gray-900,
+.cpr-app .cpr-topbar .text-gray-600,
+.cpr-app .cpr-topbar .text-gray-500,
+.cpr-app .cpr-topbar h1,
+.cpr-app .cpr-topbar p {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Softer iOS-style rounded geometry. */
+.cpr-app .rounded-xl,
+.cpr-app .rounded-2xl,
+.cpr-app .bg-white,
+.cpr-app .cpr-metric-card,
+.cpr-app .cpr-performance-panel,
+.cpr-app .cpr-target-strip,
+.cpr-login-card {
+  border-radius: 22px !important;
+}
+
+.cpr-app .cpr-dashboard-actions button,
+.cpr-app .cpr-panel-heading button,
+.cpr-app button,
+.cpr-login button,
+.cpr-app input,
+.cpr-app select,
+.cpr-app textarea,
+.cpr-login input {
+  border-radius: 16px !important;
+}
+
+.cpr-app .cpr-sidebar a,
+.cpr-app .cpr-sidebar-summary,
+.cpr-app .bg-blue-100,
+.cpr-app .bg-purple-100,
+.cpr-app .bg-green-100,
+.cpr-app .bg-green-50,
+.cpr-app .bg-yellow-100 {
+  border-radius: 14px !important;
+}
+
+.cpr-app .cpr-performance-table {
+  border-radius: 18px !important;
+}
+
+.cpr-app .cpr-topbar,
+.cpr-app .cpr-sidebar {
+  border-radius: 0 !important;
+}
+
+@media (max-width: 640px) {
+  .cpr-app .rounded-xl,
+  .cpr-app .rounded-2xl,
+  .cpr-app .bg-white,
+  .cpr-app .cpr-metric-card,
+  .cpr-app .cpr-performance-panel,
+  .cpr-app .cpr-target-strip,
+  .cpr-login-card {
+    border-radius: 18px !important;
+  }
+}
+
+.cpr-notification-panel {
+  position: absolute;
+  right: 92px;
+  top: 54px;
+  z-index: 60;
+  width: 280px;
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.72)),
+    rgba(255, 255, 255, 0.86);
+  box-shadow:
+    0 18px 44px rgba(36, 79, 92, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.86);
+  color: #244f5c;
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+}
+
+.cpr-notification-panel strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.cpr-notification-panel p {
+  margin: 4px 0 10px;
+  color: #557b86;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cpr-notification-panel ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cpr-notification-panel li {
+  padding: 9px 0;
+  border-top: 1px solid rgba(81, 137, 154, 0.14);
+  color: #244f5c;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.cpr-sidebar.cpr-sidebar-collapsed {
+  width: 86px !important;
+}
+
+.cpr-sidebar-collapsed .cpr-nav-label,
+.cpr-sidebar-collapsed .cpr-sidebar-summary,
+.cpr-sidebar-collapsed .cpr-sidebar-version {
+  display: none;
+}
+
+.cpr-sidebar-collapsed a {
+  justify-content: center;
+  padding: 0 !important;
+}
+
+.cpr-dashboard-actions select {
+  min-height: 48px;
+  padding: 0 18px;
+  border: 1px solid rgba(36, 79, 92, 0.16);
+  border-radius: 16px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.46)),
+    rgba(255, 255, 255, 0.48);
+  color: #263238;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow:
+    0 8px 22px rgba(36, 79, 92, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+}
+
+@media (max-width: 900px) {
+  .cpr-sidebar.cpr-sidebar-collapsed {
+    width: 100% !important;
+  }
+
+  .cpr-sidebar-collapsed .cpr-nav-label {
+    display: inline;
+  }
+
+  .cpr-notification-panel {
+    right: 0;
+    top: 48px;
+  }
+}

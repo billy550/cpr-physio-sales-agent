@@ -81,14 +81,23 @@ export default function AppointmentsPage() {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          branch_id: parseInt(form.branch_id),
+          corporate_client_id: parseInt(form.corporate_client_id)
+        }),
       });
       
       const result = await response.json();
       
       if (response.ok) {
+        const createdDate = form.appointment_date;
         setForm({ branch_id: '', corporate_client_id: '', employee_name: '', employee_phone: '', service_item: '', appointment_date: '', appointment_time: '', notes: '' });
-        fetchData();
+        if (createdDate && createdDate !== selectedDate) {
+          setSelectedDate(createdDate);
+        } else {
+          fetchData();
+        }
         
         // If calendar sync is needed, call API to create Google Calendar event
         if (result.needs_calendar_sync && result.calendar_event_details) {
@@ -290,14 +299,17 @@ export default function AppointmentsPage() {
               </div>
               <div>
                 <label className="block text-sm text-gray-500 mb-1">企業客戶</label>
-                <input
-                  type="text"
+                <select
                   value={form.corporate_client_id}
                   onChange={(e) => setForm({ ...form, corporate_client_id: e.target.value })}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg"
-                  placeholder="公司名稱"
                   required
-                />
+                >
+                  <option value="">請選擇</option>
+                  {corporateClients.map((client) => (
+                    <option key={client.id} value={client.id}>{client.company_name}</option>
+                  ))}
+                </select>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>

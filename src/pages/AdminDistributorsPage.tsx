@@ -70,12 +70,12 @@ export default function AdminDistributorsPage() {
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-bold text-gray-900">分銷商管理</h2>
+        <h2 className="text-2xl font-bold text-gray-900">Channel Partners</h2>
         <button
           onClick={() => setShowModal(true)}
           className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
         >
-          新增分銷商
+          Add Channel Partner
         </button>
       </div>
 
@@ -87,7 +87,7 @@ export default function AdminDistributorsPage() {
                 <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">名稱</th>
                 <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">類型</th>
                 <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">上級</th>
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">佣金比率</th>
+                <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">Partner Earnings Rate</th>
                 <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">電郵</th>
                 <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">電話</th>
                 <th className="text-center py-3 px-4 text-sm font-medium text-gray-500">狀態</th>
@@ -99,7 +99,7 @@ export default function AdminDistributorsPage() {
                   <td className="py-3 px-4 font-medium">{d.name}</td>
                   <td className="py-3 px-4">
                     <span className={`px-2 py-1 text-xs rounded-full ${d.type === "总代理" ? "bg-blue-100 text-blue-700" : "bg-purple-100 text-purple-700"}`}>
-                      {d.type}
+                      Channel Partner
                     </span>
                   </td>
                   <td className="py-3 px-4 text-sm">
@@ -124,7 +124,7 @@ export default function AdminDistributorsPage() {
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-xl p-6 w-full max-w-md">
-            <h3 className="text-lg font-semibold mb-4">新增分銷商</h3>
+            <h3 className="text-lg font-semibold mb-4">Add Channel Partner</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="block text-sm text-gray-500 mb-1">名稱</label>
@@ -143,13 +143,13 @@ export default function AdminDistributorsPage() {
                   onChange={(e) => setForm({ ...form, type: e.target.value as "总代理" | "二级代理" })}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg"
                 >
-                  <option value="总代理">總代理</option>
-                  <option value="二级代理">二級代理</option>
+                  <option value="总代理">Channel Partner</option>
+                  <option value="二级代理">Channel Partner</option>
                 </select>
               </div>
               {form.type === "二级代理" && (
                 <div>
-                  <label className="block text-sm text-gray-500 mb-1">上級總代理</label>
+                  <label className="block text-sm text-gray-500 mb-1">Parent Channel Partner</label>
                   <select
                     value={form.parent_id}
                     onChange={(e) => setForm({ ...form, parent_id: e.target.value })}
@@ -163,7 +163,7 @@ export default function AdminDistributorsPage() {
                 </div>
               )}
               <div>
-                <label className="block text-sm text-gray-500 mb-1">佣金比率</label>
+                <label className="block text-sm text-gray-500 mb-1">Partner Earnings Rate</label>
                 <input
                   type="number"
                   step="0.01"

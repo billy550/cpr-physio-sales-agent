@@ -83,7 +83,7 @@ export default function DashboardPage({ distributorId }: DashboardPageProps) {
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-white rounded-xl shadow-sm p-6">
-          <p className="text-sm text-gray-500 mb-1">本月佣金</p>
+          <p className="text-sm text-gray-500 mb-1">Monthly Partner Earnings</p>
           <p className="text-3xl font-bold text-green-600">HK${data?.total_commission?.toLocaleString() || 0}</p>
         </div>
         <div className="bg-white rounded-xl shadow-sm p-6">
@@ -106,7 +106,7 @@ export default function DashboardPage({ distributorId }: DashboardPageProps) {
                 <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">分店</th>
                 <th className="text-right py-3 px-4 text-sm font-medium text-gray-500">交易筆數</th>
                 <th className="text-right py-3 px-4 text-sm font-medium text-gray-500">消費額</th>
-                <th className="text-right py-3 px-4 text-sm font-medium text-gray-500">佣金</th>
+                <th className="text-right py-3 px-4 text-sm font-medium text-gray-500">Partner Earnings</th>
               </tr>
             </thead>
             <tbody>
@@ -133,7 +133,7 @@ export default function DashboardPage({ distributorId }: DashboardPageProps) {
                 <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">公司</th>
                 <th className="text-right py-3 px-4 text-sm font-medium text-gray-500">交易筆數</th>
                 <th className="text-right py-3 px-4 text-sm font-medium text-gray-500">消費額</th>
-                <th className="text-right py-3 px-4 text-sm font-medium text-gray-500">佣金</th>
+                <th className="text-right py-3 px-4 text-sm font-medium text-gray-500">Partner Earnings</th>
               </tr>
             </thead>
             <tbody>
